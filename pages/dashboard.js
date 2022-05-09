@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { getSession,signOut } from "next-auth/react";
-import styles from "../styles/Home.module.css";
 
 export async function getServerSideProps(context) {
   const session = await getSession(context);
@@ -18,7 +17,7 @@ export async function getServerSideProps(context) {
 
 export default function Dashboard({ user }) {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Classroom</title>
         <link rel="icon" href="/favicon.ico" />
